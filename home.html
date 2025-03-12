@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Table Layout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4"><mark>CRUD Table Layout</mark></h2>
+        <div class="d-flex justify-content-between mb-3">
+            <input type="text" id="searchInput" class="form-control w-25" placeholder="Search...">
+            <button id="addButton" class="btn btn-primary" disabled>Add New</button>
+        </div>
+        <div class="table-container">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Last Name</th>
+                        <th>FIrst Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Castro</td>
+                        <td>Joseph Zen</td>
+                        <td>Yes please</td>
+                        <td>SG</td>
+                        <td>
+                            <button type="button" class="btn btn-default">Edit</button>
+                            <button type="button" class="btn btn-default">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Castro</td>
+                        <td>Joseph Zen</td>
+                        <td>Yes please</td>
+                        <td>SG</td>
+                        <td>
+                            <button type="button" class="btn btn-default">Edit</button>
+                            <button type="button" class="btn btn-default">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Castro</td>
+                        <td>Joseph Zen</td>
+                        <td>Yes please</td>
+                        <td>SG</td>
+                        <td>
+                            <button type="button" class="btn btn-default">Edit</button>
+                            <button type="button" class="btn btn-default">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Castro</td>
+                        <td>Joseph Zen</td>
+                        <td>Yes please</td>
+                        <td>SG</td>
+                        <td>
+                            <button type="button" class="btn btn-default">Edit</button>
+                            <button type="button" class="btn btn-default">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById("searchInput").addEventListener("input", function() {
+            let addButton = document.getElementById("addButton");
+            addButton.disabled = this.value.trim() === "";
+        });
+    </script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

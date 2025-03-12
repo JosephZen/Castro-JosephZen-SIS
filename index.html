@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="mb-4">Login</h2>
+        <form>
+            <div class="mb-3">
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" id="password" class="form-control" placeholder="Password" required>
+            </div>
+            <button type="submit" id="loginButton" class="btn btn-primary w-100" disabled>Login</button>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+            const loginButton = document.getElementById("loginButton");
+
+            function toggleButton() {
+                loginButton.disabled = !(emailInput.value.trim() && passwordInput.value.trim());
+            }
+
+            emailInput.addEventListener("input", toggleButton);
+            passwordInput.addEventListener("input", toggleButton);
+        });
+    </script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
